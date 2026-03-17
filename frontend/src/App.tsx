@@ -17,15 +17,15 @@ function App() {
   return (
     <BrowserRouter>
 
-      <Toaster
+       <Toaster 
         position="top-right"
         toastOptions={{
-          duration: 3000,
           style: {
-            borderRadius: "12px",
-            background: "#0f172a",
-            color: "#fff",
-          },
+            background: 'rgba(255,255,255,0.1)',
+            backdropFilter: 'blur(20px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            color: 'white',
+          }
         }}
       />
 

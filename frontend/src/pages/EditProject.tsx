@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Edit2, ArrowLeft, Save, Image, Github, Globe, Code2 } from "lucide-react";
+import toast from "react-hot-toast"
 
 export default function EditProject() {
   const { id } = useParams();
@@ -48,10 +49,10 @@ export default function EditProject() {
       });
       
       // Reset and show success like AddProject
-      alert("Project updated successfully!");
       navigate("/projects");
+      toast.success("Project updated successfully!")
     } catch (error) {
-      alert("Failed to update project!");
+toast.error("Failed to update project!")
     } finally {
       setSaving(false);
     }

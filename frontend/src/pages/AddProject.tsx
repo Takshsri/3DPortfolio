@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { ArrowLeft, Plus } from "lucide-react";
-
+import toast from "react-hot-toast" ;
 export default function AddProject() {
   const navigate = useNavigate();
 
@@ -38,9 +38,13 @@ const handleSubmit = async (e: React.FormEvent) => {
     }
 
     navigate("/projects");
-
-  } catch (error) {
+toast.success('Project created successfully! 🎉', {
+      duration: 4000,
+      position: 'top-right',
+    });
+    } catch (error) {
     console.error("Error creating project:", error);
+    toast.error("Failed to create project");
   }
 };
   return (
