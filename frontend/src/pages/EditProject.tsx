@@ -15,7 +15,7 @@ export default function EditProject() {
 
   // fetch existing project
   useEffect(() => {
-    fetch(`http://localhost:5000/projects/${id}`)
+    fetch(`${import.meta.env.VITE_API_URL}/projects/${id}`)
       .then(res => res.json())
       .then(data => setFormData(data));
   }, [id]);
@@ -30,7 +30,7 @@ export default function EditProject() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    await fetch(`http://localhost:5000/projects/${id}`, {
+    await fetch(`${import.meta.env.VITE_API_URL}/projects/${id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
