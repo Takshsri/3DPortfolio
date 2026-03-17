@@ -50,7 +50,7 @@ const LeetCodeIcon = ({ size = 20 }: { size?: number }) => (
       </div>
 
       {/* Hero Section - Enhanced */}
-      <section className="relative flex flex-col items-center justify-center min-h-[95vh] px-4 sm:px-8 lg:px-12 py-16 max-w-7xl mx-auto">
+      <section className="relative flex flex-col items-center justify-center min-h-[95vh] px-4 sm:px-8 lg:px-12 py-36 max-w-7xl mx-auto">
         {/* Profile Image - Enhanced */}
         <div className="relative mb-8 w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-52 lg:h-52 group cursor-pointer hover:scale-105 transition-all duration-700">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/40 via-pink-500/30 to-blue-500/40 rounded-full blur-xl opacity-80 group-hover:opacity-100 transition-all duration-700" />
