@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Download, Code2, Award } from "lucide-react";
+import { Github, Linkedin, Mail, Code2, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function About() {

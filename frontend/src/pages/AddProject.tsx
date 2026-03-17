@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import type { Project } from "../types/project";
 import { ArrowLeft, Plus } from "lucide-react";
 
 export default function AddProject() {
