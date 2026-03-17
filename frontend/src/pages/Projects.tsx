@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import ProjectImage from "../assets/project.png"
 import { Github, ExternalLink, Trash2, Plus, Edit2, Code2 } from "lucide-react"
 import { useState, useEffect, useRef, useCallback } from "react"
-
+import { useNavigate } from "react-router-dom"
 interface ProjectsProps {
   projects?: Project[]
 }
@@ -37,9 +37,11 @@ export default function Projects({ projects: propProjects }: ProjectsProps) {
     localStorage.setItem("projects", JSON.stringify(updated))
   }
 
-  const handleEdit = (project: Project) => {
-    console.log('Edit project:', project)
-  }
+  const navigate = useNavigate()
+
+const handleEdit = (project: Project) => {
+  navigate(`/edit-project/${project.id}`)
+}
 
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>, index: number) => {
     const card = cardRefs.current?.[index]

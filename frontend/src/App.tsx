@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
 import AddProject from "./pages/AddProject";
 import Navbar from "./components/Navbar";
+import EditProject from "./pages/EditProject";
 
 function App() {
 
@@ -40,7 +41,7 @@ function App() {
 
         {/* PASS setProjects HERE */}
         <Route path="/add-project" element={<AddProject />} />
-
+        <Route path="/edit-project/:id" element={<EditProject />} />
         <Route path="/contact" element={<Contact />} />
 
       </Routes>

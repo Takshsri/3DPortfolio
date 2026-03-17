@@ -15,18 +15,15 @@ export class ProjectsController {
   findAll() {
     return this.projectsService.findAll();
   }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.projectsService.findOne(Number(id));
   }
-  @Put(':id')
-  update(@Param('id') id: string, @Body() body: any) {
-    return this.projectsService.update(Number(id), body);
-  }
 
   @Patch(':id')
-  patch(@Param('id') id: string, @Body() body: any) {
-    return this.projectsService.patch(Number(id), body);
+  update(@Param('id') id: string, @Body() body: any) {
+    return this.projectsService.update(Number(id), body);
   }
 
   @Delete(':id')
