@@ -127,18 +127,18 @@ export default function About() {
                 <Mail size={20} className="text-blue-400" />
                 Let's Talk
               </h4>
-              <p className="text-slate-400 mb-4">hello@developer.com</p>
+              <p className="text-slate-400 mb-4">ramyamannam7@gmail.com</p>
               <button className="w-full flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all">
                 Copy Email
               </button>
             </div>
             
             <div className="flex gap-3 pt-4">
-              <a href="https://github.com" className="flex-1 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:shadow-xl transition-all flex items-center gap-3">
+              <a href="https://github.com/Takshsri" className="flex-1 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:shadow-xl transition-all flex items-center gap-3">
                 <Github size={20} />
                 <span className="font-medium">GitHub</span>
               </a>
-              <a href="https://linkedin.com" className="flex-1 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:shadow-xl transition-all flex items-center gap-3">
+              <a href="https://www.linkedin.com/in/ramya-mannam-bb6703289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="flex-1 p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 hover:shadow-xl transition-all flex items-center gap-3">
                 <Linkedin size={20} className="text-blue-400" />
                 <span className="font-medium">LinkedIn</span>
               </a>
