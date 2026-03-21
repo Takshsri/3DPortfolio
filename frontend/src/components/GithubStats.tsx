@@ -45,7 +45,7 @@ export default function GithubStats() {
     },
     { 
       label: "Commits", 
-      value: stats.commits?.toLocaleString() || "0", 
+      value: stats.contributions?.toLocaleString() || "0", 
       icon: GitCommit,
       color: "from-emerald-500 to-green-500"
     },

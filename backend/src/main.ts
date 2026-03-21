@@ -11,9 +11,9 @@ async function bootstrap() {
     origin: '*', // change this for deployment
   });
 
-  const port = process.env.PORT || 3000; // 🔥 FIX
+  const port = process.env.PORT || 3000; 
 
-  await app.listen(port, '0.0.0.0'); // 🔥 FIX
+  await app.listen(port, '0.0.0.0'); 
 
   console.log(`Server is running on port ${port}`);
 }
