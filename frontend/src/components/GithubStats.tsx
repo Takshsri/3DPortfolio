@@ -30,42 +30,64 @@ export default function GithubStats() {
     )
   }
 
-  const statsData = [
-    { 
-      label: "Repositories", 
-      value: stats.repos?.toLocaleString() || "0", 
-      icon: Database,
-      color: "from-indigo-500 to-purple-500"
-    },
-    { 
-      label: "Stars", 
-      value: stats.stars?.toLocaleString() || "0", 
-      icon: Star,
-      color: "from-yellow-400 to-orange-500"
-    },
-    { 
-      label: "Commits", 
-      value: stats.contributions?.toLocaleString() || "0", 
-      icon: GitCommit,
-      color: "from-emerald-500 to-green-500"
-    },
-    { 
-      label: "Followers", 
-      value: stats.followers?.toLocaleString() || "0", 
-      icon: Users,
-      color: "from-blue-500 to-indigo-500"
-    },
-    { 
-      label: "Following", 
-      value: stats.following?.toLocaleString() || "0", 
-      icon: UserCheck,
-      color: "from-pink-500 to-rose-500"
-    }
-  ]
+const statsData = [
+  { 
+    label: "Repositories", 
+    value: stats.repos?.toLocaleString() || "0", 
+    icon: Database,
+    color: "from-indigo-500 to-purple-500"
+  },
+  { 
+    label: "Stars", 
+    value: stats.stars?.toLocaleString() || "0", 
+    icon: Star,
+    color: "from-yellow-400 to-orange-500"
+  },
 
+  // 🔥 MAIN (replace commits card)
+  { 
+    label: "Contributions", 
+    value: stats.contributions?.toLocaleString() || "0", 
+    icon: GitCommit,
+    color: "from-emerald-500 to-green-500"
+  },
+
+  // ➕ NEW CARDS
+  { 
+    label: "Commits", 
+    value: stats.commits?.toLocaleString() || "0", 
+    icon: GitCommit,
+    color: "from-green-400 to-emerald-600"
+  },
+  { 
+    label: "PRs", 
+    value: stats.pullRequests?.toLocaleString() || "0", 
+    icon: GitCommit,
+    color: "from-purple-500 to-pink-500"
+  },
+  { 
+    label: "Issues", 
+    value: stats.issues?.toLocaleString() || "0", 
+    icon: GitCommit,
+    color: "from-red-500 to-orange-500"
+  },
+
+  { 
+    label: "Followers", 
+    value: stats.followers?.toLocaleString() || "0", 
+    icon: Users,
+    color: "from-blue-500 to-indigo-500"
+  },
+  { 
+    label: "Following", 
+    value: stats.following?.toLocaleString() || "0", 
+    icon: UserCheck,
+    color: "from-pink-500 to-rose-500"
+  }
+]
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-      {statsData.map((stat, index) => {
+<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+        {statsData.map((stat, index) => {
         const Icon = stat.icon
         return (
           <div
