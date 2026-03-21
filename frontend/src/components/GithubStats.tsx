@@ -14,7 +14,8 @@ import CountUp from "react-countup"
 export default function GithubStats() {
   const [stats, setStats] = useState<any>(null)
   const [isHovered, setIsHovered] = useState<number | null>(null)
-
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  
   useEffect(() => {
     const load = async () => {
       const data = await getGithubStats()
@@ -94,6 +95,13 @@ export default function GithubStats() {
             className="group relative p-[1px] rounded-2xl overflow-hidden"
             onMouseEnter={() => setIsHovered(index)}
             onMouseLeave={() => setIsHovered(null)}
+                  onMouseMove={(e) => {
+        const rect = (e.currentTarget as HTMLDivElement).getBoundingClientRect()
+        setMousePos({
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top
+        })
+      }}
           >
             {/* Animated Border */}
             <div className="absolute inset-0 rounded-2xl bg-[conic-gradient(at_top_left,_#6366f1,_#a855f7,_#ec4899,_#6366f1)] opacity-0 group-hover:opacity-100 transition duration-700 animate-spin-slow" />
@@ -104,6 +112,12 @@ export default function GithubStats() {
                             transition-all duration-500 hover:-translate-y-2 hover:bg-white/10 hover:border-white/20">
 
               {/* Icon */}
+              <div
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-300"
+                style={{
+                  background: `radial-gradient(300px circle at ${mousePos.x}px ${mousePos.y}px, rgba(99,102,241,0.25), transparent 70%)`
+                }}
+/>
               <div className="relative z-10 mb-4 p-3 w-14 h-14 bg-gradient-to-r from-slate-800/80 to-slate-900/80 rounded-2xl shadow-lg flex items-center justify-center">
                 <Icon size={22} className={`text-white ${isHovered === index ? 'scale-110' : ''}`} />
               </div>
