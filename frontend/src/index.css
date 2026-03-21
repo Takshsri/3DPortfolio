@@ -30,3 +30,15 @@
 .animate-gradient-xy { animation: gradient-xy 20s ease infinite; }
 .animate-bounce-slow { animation: bounce-slow 2s ease-in-out infinite; }
 .animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 16px rgba(255,255,255,0.8));
+  }
+}
+
+.animate-glow {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
